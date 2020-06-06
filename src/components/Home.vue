@@ -8,22 +8,22 @@
               <article class="post ">
                 <section class="meta">
                   <h2 class="title">
-                    <router-link :to="'/content/' + i.bID">
-                      {{ i.btitle }}
+                    <router-link :to="'/content/' + i.id">
+                      {{ i.title }}
                     </router-link>
                   </h2>
-                  <time>
+                  <!-- <time>
                     {{i.bCreateTime}}
-                  </time>
+                  </time> -->
                   <div class='cats'>
                     <a href="javascript:void(0)">{{i.bsubmitter}}</a>
                   </div>
                 </section>
                 <section class="article typo">
-                  <article v-html="i.bcontent"></article>
-                  <div class="readmore">
+                  <article v-html="i.content"></article>
+                  <!-- <div class="readmore">
                     <a href="/dotnet/asp.net core???????????/">查看更多</a>
-                  </div>
+                  </div> -->
                   <div class="full-width auto-padding tags">
                     <a href="javascript:void(0);">{{i.bcategory}}</a>
                   </div>
@@ -45,7 +45,7 @@
 
 
         </div>
-        <aside class='l_side'>
+        <!-- <aside class='l_side'>
 
 
           <section class='m_widget categories'>
@@ -69,7 +69,7 @@
             </div>
           </section>
 
-        </aside>
+        </aside> -->
       </div>
     </div>
   </div>
@@ -99,9 +99,11 @@ export default {
             if (urlPage) {
                 that.page = urlPage
             }
-            this.$api.get('Blog?page=' + that.page, null, r => {this.list = r.data
-                this.page = r.page
-                this.TotalCount = r.pageCount
+            // this.$api.get('Blog?page=' + that.page, null, r => {this.list = r.data
+            this.$api.get('Blog', null, r => {
+                this.list = r.response.data
+                this.page = r.response.page
+                this.TotalCount = r.response.pageCount
                 this.isShow=false
             })
         }

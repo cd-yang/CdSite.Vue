@@ -1,5 +1,7 @@
 // 配置API接口地址
-var root = 'http://apk.neters.club/api'
+// var root = 'https://apk.neters.club/api'
+// var root = 'https://localhost:5001/api'
+var root = '/api/'  //使用 proxy 的 api，解决跨域问题
 // 引用axios
 var axios = require('axios')
 // 自定义判断元素类型JS
