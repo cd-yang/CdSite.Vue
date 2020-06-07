@@ -5,7 +5,7 @@
         <div class='l_main'>
           <section class="post-list">
             <div v-for="i in list" :key="i.bID" class='post-wrapper'>
-              <article class="post ">
+              <article class="post">
                 <section class="meta">
                   <h2 class="title">
                     <router-link :to="'/content/' + i.id">
@@ -15,18 +15,12 @@
                   <!-- <time>
                     {{i.bCreateTime}}
                   </time> -->
-                  <div class='cats'>
-                    <a href="javascript:void(0)">{{i.bsubmitter}}</a>
-                  </div>
                 </section>
                 <section class="article typo">
-                  <article v-html="i.content"></article>
-                  <!-- <div class="readmore">
-                    <a href="/dotnet/asp.net core???????????/">查看更多</a>
+                  <article v-html="i.contentAbstract"></article>
+                  <!-- <div class="full-width auto-padding tags">
+                    <a href="javascript:void(0);">{{i.category}}</a>
                   </div> -->
-                  <div class="full-width auto-padding tags">
-                    <a href="javascript:void(0);">{{i.bcategory}}</a>
-                  </div>
                 </section>
               </article>
             </div>
@@ -34,42 +28,32 @@
 
 
           <nav id="page-nav">
+            <!-- 此处设计预加载 -->
             <router-link :to="'/?page=' + (page>1?page-1:1)" class="prev" rel="prev">
               {{(page&lt;=1? "": "Previous")}}
             </router-link>
             <router-link :to="'/?page=' + (page>=TotalCount? TotalCount: page+1)" class="next" rel="next">
               {{(page>=TotalCount? "": "Next")}}
             </router-link>
-
           </nav>
-
-
         </div>
+        
         <!-- <aside class='l_side'>
-
-
           <section class='m_widget categories'>
             <div class='header'>标签</div>
             <div class='content'>
-
               <ul class="entry">
 
                 <li><a class="flat-box" href="javascript:void(0);">
-                  <div class='name'>博客</div>
+                  <div class='name'>MVVM</div>
                   <div class='badget'>11</div>
                 </a></li>
 
-                <li><a class="flat-box" href="javascript:void(0);">
-                  <div class='name'>随笔</div>
-                  <div class='badget'>10</div>
-                </a></li>
-
               </ul>
-
             </div>
           </section>
-
         </aside> -->
+
       </div>
     </div>
   </div>
