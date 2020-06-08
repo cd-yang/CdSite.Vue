@@ -17,6 +17,11 @@ export default new Router({
             path: "/about",
             name: "about",
             component: () => import("./components/About.vue")
+        },    
+        {
+            path: "/content/:id",
+            name: "content",
+            component: () => import("./components/Content.vue")
         }
     ]
 })

@@ -12,15 +12,12 @@
                       {{ i.title }}
                     </router-link>
                   </h2>
-                  <!-- <time>
-                    {{i.bCreateTime}}
-                  </time> -->
+                  <time>
+                    {{new Date(i.createOnUtc).toLocaleDateString()}}
+                  </time>
                 </section>
                 <section class="article typo">
                   <article v-html="i.contentAbstract"></article>
-                  <!-- <div class="full-width auto-padding tags">
-                    <a href="javascript:void(0);">{{i.category}}</a>
-                  </div> -->
                 </section>
               </article>
             </div>
@@ -37,23 +34,6 @@
             </router-link>
           </nav>
         </div>
-        
-        <!-- <aside class='l_side'>
-          <section class='m_widget categories'>
-            <div class='header'>标签</div>
-            <div class='content'>
-              <ul class="entry">
-
-                <li><a class="flat-box" href="javascript:void(0);">
-                  <div class='name'>MVVM</div>
-                  <div class='badget'>11</div>
-                </a></li>
-
-              </ul>
-            </div>
-          </section>
-        </aside> -->
-
       </div>
     </div>
   </div>
@@ -69,7 +49,6 @@ export default {
         return {
             page: 1,
             TotalCount: 1,
-            isShow: true,
             list: []
         }
     },
@@ -83,19 +62,17 @@ export default {
             if (urlPage) {
                 that.page = urlPage
             }
-            // this.$api.get('Blog?page=' + that.page, null, r => {this.list = r.data
-            this.$api.get('Blog', null, r => {
+            this.$api.get('Blog?page=' + that.page, null, r => {
+            // this.$api.get('Blog', null, r => {
                 this.list = r.response.data
                 this.page = r.response.page
                 this.TotalCount = r.response.pageCount
-                this.isShow=false
             })
         }
     },
     watch: {
         '$route'(to, from) {
             this.list=[]
-            this.isShow=true
             this.page = to.query.page
             this.getData()
         }
