@@ -18,11 +18,11 @@
 					            <span class="art-item-left">
                                     <i class="icon icon-chevron-thin-left"></i>
                                     上一篇：
-                                    <router-link :to="'/content/' + dat.previousID">{{ dat.previous }}</router-link>
+                                    <router-link :to="'/content/' + dat.previousId">{{ dat.previous }}</router-link>
                                 </span>
                                 <span class="art-item-right">
                                     下一篇：
-                                    <router-link :to="'/content/' + dat.nextID">{{ dat.next }}</router-link>
+                                    <router-link :to="'/content/' + dat.nextId">{{ dat.next }}</router-link>
                                     <i class="icon icon-chevron-thin-right"></i>
                                 </span>
                             </div>
