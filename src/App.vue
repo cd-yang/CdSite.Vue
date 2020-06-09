@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <header style="width:100%;background: none;height: 0;"> -->
-    <header style="width:100%;background: none;">
+    <header>
       <div class="header-container">
         <div class="header-container-content">
           <a class="header-container-logo" href="/" rel="noopener noreferrer">
@@ -18,8 +18,8 @@
           <div class="header-container-banner">
             <div class>
               <div class="header-container-banner-item">
-                <a class="header-container-banner-item-btn" href="/">首页</a>
-                <a class="header-container-banner-item-btn" href="/tools">工具</a>
+                <!-- <a class="header-container-banner-item-btn" href="/">首页</a> -->
+                <!-- <a class="header-container-banner-item-btn" href="/tools">工具</a> -->
                 <!-- <a class="header-container-banner-item-btn" href="/admin">Admin管理后台</a> -->
               </div>
             </div>
@@ -27,8 +27,44 @@
         </div>
       </div>
     </header>
-    <div id="nav"></div>
+
     <router-view />
+
+        
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">沪ICP备20008178号 </a></div>
+        <div class="copyright">&copy;
+          <span itemprop="copyrightYear">2020</span>
+          <span class="with-love">
+            <i class="fa fa-user"></i>
+          </span>
+          <span class="author" itemprop="copyrightHolder">CD Yang</span>
+        </div>
+
+        <!-- <div class="busuanzi-count">
+          <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-user"></i>
+              </span>
+              <span class="site-uv" title="总访客量">
+                <span id="busuanzi_value_site_uv"></span>
+              </span>
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="site-pv" title="总访问量">
+                <span id="busuanzi_value_site_pv"></span>
+              </span>
+            </span>
+        </div> -->
+      </div>
+    </footer>
+
   </div>
 </template>
 
@@ -80,6 +116,13 @@ export default {
 </script>
 
 <style lang="css">
+
+header {
+    width:100%;
+    position:fixed;
+    top:10px;
+}
+
 /* @import "./style/stylehome.css";
 @import "./style/base.css";
 @import "./style/m.css"; */
