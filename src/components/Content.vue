@@ -10,21 +10,22 @@
                                 {{new Date(this.dat.createOnUtc).toLocaleDateString()}}
                             </time>
                         </section>
-                        <section class="article typo">
-                            <div class="article-entry" itemprop="articleBody">
+                        <section>
+                            <div>
                                 <article v-html="dat.content"></article>
                             </div>
-                            <div class="art-item-footer">
-					            <span class="art-item-left">
-                                    <i class="icon icon-chevron-thin-left"></i>
-                                    上一篇：
-                                    <router-link :to="'/content/' + dat.previousId">{{ dat.previous }}</router-link>
+                            <div>
+                              <template v-if="dat.previousId > 0">
+                                <span class="post-item-previous">
+                                    <router-link :to="'/content/' + dat.previousId">上一篇：{{ dat.previous }}</router-link>
                                 </span>
-                                <span class="art-item-right">
-                                    下一篇：
-                                    <router-link :to="'/content/' + dat.nextId">{{ dat.next }}</router-link>
-                                    <i class="icon icon-chevron-thin-right"></i>
+                              </template>
+
+                              <template v-if="dat.nextId > 0">
+                                <span class="post-item-next">
+                                    <router-link :to="'/content/' + dat.nextId">下一篇：{{ dat.next }}</router-link>
                                 </span>
+                              </template>
                             </div>
                         </section>
                     </article>
