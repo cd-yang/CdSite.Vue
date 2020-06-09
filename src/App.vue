@@ -31,7 +31,7 @@
     <router-view />
 
         
-    <footer class="footer">
+    <footer class="footer" style="margin: auto; width: 50%;">
       <div class="footer-inner">
         <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">沪ICP备20008178号 </a></div>
         <div class="copyright">&copy;
@@ -39,7 +39,7 @@
           <span class="with-love">
             <i class="fa fa-user"></i>
           </span>
-          <span class="author" itemprop="copyrightHolder">CD Yang</span>
+          <span class="author" itemprop="copyrightHolder" style="margin-left: 15px;">CD Yang</span>
         </div>
 
         <!-- <div class="busuanzi-count">
@@ -119,8 +119,8 @@ export default {
 
 header {
     width:100%;
-    position:fixed;
     top:10px;
+    position:sticky;
 }
 
 /* @import "./style/stylehome.css";
