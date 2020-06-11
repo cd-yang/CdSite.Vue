@@ -18,9 +18,15 @@ module.exports = {
       // 开启 CSS source maps?
       sourceMap: false,
       // css预设器配置项
-      loaderOptions: {},
-      // 启用 CSS modules for all css / pre-processor files.
-      requireModuleExtension: false
+      loaderOptions: {
+        less:{
+          lessOptions: {
+            javascriptEnabled: true
+          }
+        }
+      },
+        // 启用 CSS modules for all css / pre-processor files.
+      requireModuleExtension: true
     },
     // use thread-loader for babel & TS in production build
     // enabled by default if the machine has more than 1 cores
