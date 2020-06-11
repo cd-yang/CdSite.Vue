@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
-    <!-- <header style="width:100%;background: none;height: 0;"> -->
-    <header>
+ <div id="components-layout-demo-basic">
+    <a-layout>
+      <a-layout-header>
       <div class="header-container">
         <div class="header-container-content">
           <a class="header-container-logo" href="/" rel="noopener noreferrer">
@@ -26,12 +26,15 @@
           </div>
         </div>
       </div>
-    </header>
-
-    <router-view />
-
-        
-    <footer class="footer" style="margin: auto; width: 50%;">
+      </a-layout-header>
+      <a-layout>
+        <!-- <a-layout-sider>Sider</a-layout-sider> -->
+        <a-layout-content>
+          <router-view />
+        </a-layout-content>
+        <!-- <a-layout-sider>Sider</a-layout-sider> -->
+      </a-layout>
+      <a-layout-footer>
       <div class="footer-inner">
         <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">沪ICP备20008178号 </a></div>
         <div class="copyright">&copy;
@@ -41,30 +44,9 @@
           </span>
           <span class="author" itemprop="copyrightHolder" style="margin-left: 15px;">CD Yang</span>
         </div>
-
-        <!-- <div class="busuanzi-count">
-          <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-            <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-user"></i>
-              </span>
-              <span class="site-uv" title="总访客量">
-                <span id="busuanzi_value_site_uv"></span>
-              </span>
-            </span>
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="site-pv" title="总访问量">
-                <span id="busuanzi_value_site_pv"></span>
-              </span>
-            </span>
-        </div> -->
       </div>
-    </footer>
-
+      </a-layout-footer>
+    </a-layout>
   </div>
 </template>
 
@@ -115,17 +97,42 @@ export default {
 };
 </script>
 
-<style lang="css">
 
-header {
-    width:100%;
-    top:10px;
-    position:sticky;
+
+<style>
+
+#components-layout-demo-basic {
+  text-align: center;
 }
-
-/* @import "./style/stylehome.css";
-@import "./style/base.css";
-@import "./style/m.css"; */
+#components-layout-demo-basic .ant-layout-header,
+#components-layout-demo-basic .ant-layout-footer {
+  /* background: #7dbcea;
+  color: #fff; */
+  background: transparent;
+  color: #000;
+}
+#components-layout-demo-basic .ant-layout-footer {
+  line-height: 1.5;
+}
+#components-layout-demo-basic .ant-layout-sider {
+  /* background: #3ba0e9;
+  color: #fff; */
+  background: transparent;
+  color: #000;
+  line-height: 120px;
+}
+#components-layout-demo-basic .ant-layout-content {
+  /* background: rgba(16, 142, 233, 1);
+  color: #fff; */
+  background: transparent;
+  color: #000;
+  min-height: 120px;
+  line-height: 120px;
+}
+#components-layout-demo-basic > .ant-layout {
+  margin-bottom: 48px;
+}
+#components-layout-demo-basic > .ant-layout:last-child {
+  margin: 0;
+}
 </style>
-
-
