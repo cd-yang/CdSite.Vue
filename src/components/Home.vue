@@ -7,7 +7,7 @@
             <div v-for="i in list" :key="i.bID" class='post-wrapper'>
               <article class="post">
                 <section class="meta">
-                  <h2 class="title">
+                  <h2>
                     <router-link :to="'/content/' + i.id">
                       {{ i.title }}
                     </router-link>
@@ -16,7 +16,7 @@
                     {{new Date(i.createOnUtc).toLocaleDateString()}}
                   </time>
                 </section>
-                <section class="article typo">
+                <section style="margin-bottom:30px;">
                   <article v-html="i.contentAbstract"></article>
                 </section>
               </article>
@@ -24,7 +24,7 @@
           </section>
 
 
-          <nav id="page-nav">
+          <nav id="page-nav" style="margin-top:30px;">
             <!-- 此处设计预加载 -->
             <router-link :to="'/?page=' + (page>1?page-1:1)" class="prev" rel="prev">
               {{(page&lt;=1? "": "Previous")}}

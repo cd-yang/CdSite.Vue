@@ -22,7 +22,7 @@
                               </template>
 
                               <template v-if="dat.nextId > 0">
-                                <span class="post-item-next">
+                                <span style="float:right;">
                                     <router-link :to="'/content/' + dat.nextId">下一篇：{{ dat.next }}</router-link>
                                 </span>
                               </template>

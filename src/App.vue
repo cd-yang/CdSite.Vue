@@ -1,5 +1,5 @@
 <template>
- <div id="components-layout-demo-basic">
+ <div id="app">
     <a-layout>
       <a-layout-header>
       <div class="header-container">
@@ -97,42 +97,35 @@ export default {
 };
 </script>
 
-
-
 <style>
-
-#components-layout-demo-basic {
-  text-align: center;
-}
-#components-layout-demo-basic .ant-layout-header,
-#components-layout-demo-basic .ant-layout-footer {
+#app .ant-layout-header,
+#app .ant-layout-footer {
   /* background: #7dbcea;
   color: #fff; */
   background: transparent;
-  color: #000;
+  align-self: center;
 }
-#components-layout-demo-basic .ant-layout-footer {
+#app .ant-layout-footer {
   line-height: 1.5;
 }
-#components-layout-demo-basic .ant-layout-sider {
+#app .ant-layout-sider {
   /* background: #3ba0e9;
   color: #fff; */
   background: transparent;
   color: #000;
   line-height: 120px;
 }
-#components-layout-demo-basic .ant-layout-content {
+#app .ant-layout-content {
   /* background: rgba(16, 142, 233, 1);
   color: #fff; */
   background: transparent;
   color: #000;
   min-height: 120px;
-  line-height: 120px;
 }
-#components-layout-demo-basic > .ant-layout {
+#app > .ant-layout {
   margin-bottom: 48px;
 }
-#components-layout-demo-basic > .ant-layout:last-child {
+#app > .ant-layout:last-child {
   margin: 0;
 }
 </style>
