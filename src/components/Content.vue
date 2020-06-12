@@ -15,15 +15,15 @@
                                 <article v-html="dat.content"></article>
                             </div>
                             <div>
-                              <template v-if="dat.previousId > 0">
+                              <template v-if="dat.previousSlug">
                                 <span class="post-item-previous">
-                                    <router-link :to="'/content/' + dat.previousId">上一篇：{{ dat.previous }}</router-link>
+                                    <router-link :to="'/post/' + dat.previousSlug">上一篇：{{ dat.previous }}</router-link>
                                 </span>
                               </template>
 
-                              <template v-if="dat.nextId > 0">
+                              <template v-if="dat.nextSlug">
                                 <span style="float:right;">
-                                    <router-link :to="'/content/' + dat.nextId">下一篇：{{ dat.next }}</router-link>
+                                    <router-link :to="'/post/' + dat.nextSlug">下一篇：{{ dat.next }}</router-link>
                                 </span>
                               </template>
                             </div>

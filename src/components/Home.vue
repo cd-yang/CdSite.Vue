@@ -8,7 +8,7 @@
               <article class="post">
                 <section class="meta">
                   <h2>
-                    <router-link :to="'/content/' + i.id">
+                    <router-link :to="'/post/' + i.slug">
                       {{ i.title }}
                     </router-link>
                   </h2>

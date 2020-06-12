@@ -19,7 +19,7 @@ export default new Router({
             component: () => import("./components/About.vue")
         },    
         {
-            path: "/content/:id",
+            path: "/post/:id",
             name: "content",
             component: () => import("./components/Content.vue")
         }
