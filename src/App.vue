@@ -1,41 +1,34 @@
 <template>
- <div id="app">
+ <div id="app" style="background:rgb(244,244,244);height:100%">
     <a-layout>
-      <a-layout-header>
-      <div class="header-container">
-        <div class="header-container-content">
+      <a-affix>
+        <a-layout-header style="background:rgb(227,227,227);padding-bottom:0px;padding-top:3px;height:46px;line-height:40px">
           <a class="header-container-logo" href="/" rel="noopener noreferrer">
-            <img src="/mstile-150x150.png" style="width: 60px;" />
+            <img src="/android-chrome-192x192.png" style="width: 30px;" />
           </a>
-          <div class="header-container-userinfo">
+          <span class="header-container-userinfo">
             <template v-if="!sysUserName"></template>
             <template v-else>
               <a href="/manager" class="header-container-banner-item-btn">{{ sysUserName }}</a>
               <a href="/editor" role="button" tabindex="-1"><span>写文章</span></a>
               <span class="header-container-logout" @click="logout">注销</span>
             </template>
-          </div>
-          <div class="header-container-banner">
-            <div class>
-              <div class="header-container-banner-item">
-                <!-- <a class="header-container-banner-item-btn" href="/">首页</a> -->
-                <!-- <a class="header-container-banner-item-btn" href="/tools">工具</a> -->
-                <!-- <a class="header-container-banner-item-btn" href="/admin">Admin管理后台</a> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </a-layout-header>
-      <a-layout>
+          </span>
+          <span class="header-container-banner">
+            <a class="header-container-banner-item-btn" href="/">首页</a>
+            <a class="header-container-banner-item-btn" href="/tools">工具</a>
+            <a class="header-container-banner-item-btn" href="/admin">Admin管理后台</a>
+          </span>
+        </a-layout-header>
+      </a-affix>
+      <a-layout style="height:100%">
         <!-- <a-layout-sider>Sider</a-layout-sider> -->
         <a-layout-content>
           <router-view />
         </a-layout-content>
         <!-- <a-layout-sider>Sider</a-layout-sider> -->
       </a-layout>
-      <a-layout-footer>
-      <div class="footer-inner">
+      <a-layout-footer style="background:rgb(227,227,227);width:100%;text-align:center;padding:5px 0px;">
         <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">沪ICP备20008178号 </a></div>
         <div class="copyright">&copy;
           <span itemprop="copyrightYear">2020</span>
@@ -44,7 +37,6 @@
           </span>
           <span class="author" itemprop="copyrightHolder" style="margin-left: 15px;">CD Yang</span>
         </div>
-      </div>
       </a-layout-footer>
     </a-layout>
   </div>
@@ -127,5 +119,10 @@ export default {
 }
 #app > .ant-layout:last-child {
   margin: 0;
+}
+
+.header-container-banner-item-btn {
+  margin-left: 30px;
+  color: #000;
 }
 </style>

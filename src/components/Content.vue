@@ -3,18 +3,19 @@
         <div class="l_body">
             <div class="container clearfix">
                 <div class="l_main">
-                    <article id="" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
-                        <section class="meta">
+                    <article itemscope="" itemprop="blogPost" style="margin-top:10px;">
+                        <strong style="margin-bottom:10px;font-weight: bolder">
                             <h2 class="title">{{dat.title}}</h2>
                             <time>
                                 {{new Date(this.dat.createOnUtc).toLocaleDateString()}}
                             </time>
-                        </section>
+                        </strong>
+                        <!-- <hr style="border:1 dashed #987cb9" width="80%" color=#987cb9 SIZE=1> -->
                         <section>
                             <div>
                                 <article v-html="dat.content"></article>
                             </div>
-                            <div>
+                            <div style="margin-bottom:20px">
                               <template v-if="dat.previousSlug">
                                 <span class="post-item-previous">
                                     <router-link :to="'/post/' + dat.previousSlug">上一篇：{{ dat.previous }}</router-link>
@@ -22,7 +23,7 @@
                               </template>
 
                               <template v-if="dat.nextSlug">
-                                <span style="float:right;">
+                                <span style="float:right;margin-bottom:5px">
                                     <router-link :to="'/post/' + dat.nextSlug">下一篇：{{ dat.next }}</router-link>
                                 </span>
                               </template>
