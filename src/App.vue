@@ -15,9 +15,10 @@
             </template>
           </span>
           <span class="header-container-banner">
-            <a class="header-container-banner-item-btn" href="/">首页</a>
-            <a class="header-container-banner-item-btn" href="/tools">工具</a>
-            <a class="header-container-banner-item-btn" href="/admin">Admin管理后台</a>
+            <a class="header-container-banner-item-btn" href="/">CD-Yang</a>
+            <a class="header-container-banner-item-btn" href="/about">关于</a>
+            <!-- <a class="header-container-banner-item-btn" href="/tools">工具</a> -->
+            <!-- <a class="header-container-banner-item-btn" href="/admin">Admin管理后台</a> -->
           </span>
         </a-layout-header>
       </a-affix>
