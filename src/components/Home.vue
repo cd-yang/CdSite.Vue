@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" style="margin-top:10px;margin-bottom:10px;">
     <div class="l_body">
       <div class='container clearfix'>
         <div class='l_main'>

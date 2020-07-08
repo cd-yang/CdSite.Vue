@@ -1,5 +1,5 @@
 <template>
-     <div class="container">
+     <div class="container" style="margin-top:10px;">
         <h3>Me and the Blog</h3>
         <hr />
         <div class="row">
