@@ -4,6 +4,9 @@
       <div class='container clearfix'>
         <div class='l_main'>
           <section class="post-list">
+            <center v-show="!list || !list.length" >
+              <a-spin size="large" tip="Loading..."></a-spin>
+            </center>
             <div v-for="i in list" :key="i.bID" class='post-wrapper'>
               <article class="post">
                 <section class="meta">

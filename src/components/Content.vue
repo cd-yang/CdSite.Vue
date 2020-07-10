@@ -2,7 +2,11 @@
     <div>
         <div class="l_body">
             <div class="container clearfix">
-                <div class="l_main">
+                <center v-if="!dat.content">
+                    <a-spin size="large" tip="Loading..."></a-spin>
+                </center>
+                <div v-else class="l_main">
+                    <a-spin v-show="!dat" size="large" tip="加载中..."></a-spin>
                     <article itemscope="" itemprop="blogPost" style="margin-top:10px;">
                         <strong style="margin-bottom:10px;font-weight: bolder">
                             <h2 class="title">{{dat.title}}</h2>
