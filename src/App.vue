@@ -3,9 +3,9 @@
     <a-layout>
       <a-affix>
         <a-layout-header style="background:rgb(227,227,227);padding-bottom:0px;padding-top:3px;height:46px;line-height:40px">
-          <a class="header-container-logo" href="/" rel="noopener noreferrer">
+          <router-link class="header-container-logo" to="/">
             <img src="/android-chrome-192x192.png" style="width: 30px;" />
-          </a>
+          </router-link>
           <span class="header-container-userinfo">
             <template v-if="!sysUserName"></template>
             <template v-else>
@@ -15,8 +15,8 @@
             </template>
           </span>
           <span class="header-container-banner">
-            <a class="header-container-banner-item-btn" href="/">CD-Yang</a>
-            <a class="header-container-banner-item-btn" href="/about">关于</a>
+            <router-link class="header-container-banner-item-btn" to="/">CD-Yang</router-link>
+            <router-link class="header-container-banner-item-btn" to="/about">关于</router-link>
             <!-- <a class="header-container-banner-item-btn" href="/tools">工具</a> -->
             <!-- <a class="header-container-banner-item-btn" href="/admin">Admin管理后台</a> -->
           </span>
